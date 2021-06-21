@@ -6,7 +6,7 @@
 
 class Koerper {
 public:
-  Koerper(){std::cout << "KO"<< std::endl;}
+  Koerper(){}
   virtual Vektor punkt()=0;
   virtual std ::string name() {return "Koerper";}
 };

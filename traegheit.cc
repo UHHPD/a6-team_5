@@ -34,15 +34,15 @@ int main() {
   std::cin >> u;
 
   std :: unique_ptr < Koerper > k( new Zylindermantel (ZM_R , ZM_L ));
-  double Jx=traegheit(k.get(),a,u,N,M);
+  double Jzm=traegheit(k.get(),a,u,N,M);
 
   std::cout << "Massentraegheitsmoment fuer einen Zylindermantel"
-            << " mit a = " << a << " und u = " << u << ": " << Jx << std::endl;
+            << " mit a = " << a << " und u = " << u << ": " << Jzm << std::endl;
 
   std :: unique_ptr < Koerper > k2( new Vollzylinder (ZM_R , ZM_L ));
-  double Jy=traegheit(k2.get(),a,u,N,M);
+  double Jvz=traegheit(k2.get(),a,u,N,M);
 
   std::cout << "Massentraegheitsmoment fuer einen Vollzylinder"
-            << " mit a = " << a << " und u = " << u << ": " << Jy << std::endl;
+            << " mit a = " << a << " und u = " << u << ": " << Jvz << std::endl;
   return 0;
 }
